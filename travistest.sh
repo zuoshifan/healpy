@@ -2,6 +2,13 @@
 cd build/lib*/healpy/test/data
 . get_wmap_maps.sh
 cd ../..
+for lib in *.so
+do
+    echo "++++++++++++++++++++++++++++++++++++"
+    echo $lib
+    ldd $lib
+    echo "++++++++++++++++++++++++++++++++++++"
+done
 nosetests -v --with-doctest
 nosetests_returnvalue=$?
 echo Run Cython extensions doctests
