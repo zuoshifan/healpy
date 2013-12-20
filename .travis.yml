@@ -10,8 +10,8 @@ before_install:
   - export PATH=/home/travis/anaconda/bin:$PATH
 # command to install dependencies
 install: 
-  - conda install --yes pip numpy cython astropy setuptools
-  - pip install --use-mirrors pytest coveralls pytest-cov pyfits matplotlib
+  - conda install --yes pip numpy cython astropy setuptools matplotlib
+  - pip install --use-mirrors pyfits
   - pip install -r requirements.txt --use-mirrors
   - python setup.py install
 # command to run tests
